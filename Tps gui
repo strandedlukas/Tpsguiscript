@@ -1,0 +1,612 @@
+-- whitelist script GUI made by strandedlukas
+local function handleButtonClick(buttonNumber)
+    print("The player pressed Yes")
+    screenGui:Destroy()
+end
+
+local function createNotification()
+    local notification = game.StarterGui:SetCore("SendNotification", {
+        Title = "Checking...",
+        Text = "join the discord little boy",
+        Duration = 15,
+        Button1 = "Yes",
+        Button2 = "Yes",
+        Callback = handleButtonClick,
+    })
+end
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "CheckingGui"
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0.5, 0, 0.1, 0)
+frame.Position = UDim2.new(0.25, 0, 0.45, 0)
+frame.BackgroundColor3 = Color3.new(1, 1, 1) -- White background color
+frame.BackgroundTransparency = 0.5
+frame.Parent = screenGui
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Text = "Checking for whitelist..."
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+textLabel.BackgroundTransparency = 1
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.TextColor3 = Color3.new(0, 0, 0)
+textLabel.TextScaled = true
+textLabel.Parent = frame
+
+local function removeGui()
+    wait(5)
+    screenGui:Destroy()
+end
+
+removeGui()
+
+createNotification()
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("🦴 made by ludaz and lukas | WWW NOBA 🦴", "DarkTheme")
+
+local ReachTab = Window:NewTab("⚽️ Reach ⚽️")
+
+local Section = ReachTab:NewSection("Legit Section 👇")
+
+Section:NewButton("1.5 (this is barely used i bet)", "ButtonInfo", function()
+    local Leg = "Right" -- Default Leg
+    local Reach = 1.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("2.5 (we skipped 2.0 you'll see why)", "ButtonInfo", function()
+    local Leg = "Right" -- Default Leg
+    local Reach = 2.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("3.0 (most legit)", "ButtonInfo", function()
+    local Leg = "Right" -- Default Leg
+    local Reach = 3.0 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("4.0", "ButtonInfo", function()
+    local Leg = "Right" -- Default Leg
+    local Reach = 4.0 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+local Section = ReachTab:NewSection("⚽️ half reaches ⚽️")
+
+Section:NewButton("1.5", "ButtonInfo", function()
+    local Leg = "Right" -- Default Leg
+    local Reach = 1.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("2.5", "ButtonInfo", function()
+    local Leg = "Right" -- Default Leg
+    local Reach = 2.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("3.5", "ButtonInfo", function()
+    local Leg = "Right" -- Default Leg
+    local Reach = 3.5-- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("4.5", "ButtonInfo", function()
+    print("Clicked")
+end)
+
+local Leg = "Right" -- Default Leg
+    local Reach = 4.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+
+Section:NewButton("5.5", "ButtonInfo", function()
+    local Leg = "Right" -- Default Leg
+    local Reach = 5.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("6.5", "ButtonInfo", function()
+    local Leg = "Right" -- Default Leg
+    local Reach = 6.6 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+local Section = ReachTab:NewSection("⚽️ left leg ⚽️")
+
+Section:NewButton("1.5 reach", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 1.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("2.5 reach", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 2.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("3.5", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 3.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("4.5", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 4.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("5.5 reach", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 5.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("6.5 reach", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 6.5 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+local Section = ReachTab:NewSection("⚽️ all left leg reaches (.0) ⚽️")
+
+Section:NewButton("2.0 reach", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 2.0 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("3.0 reach", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 3.0 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("4.0 reach (most used)", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 4.0 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("5.0", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 5.0 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+Section:NewButton("6.0 reach", "ButtonInfo", function()
+    local Leg = "Left" -- Default Leg
+    local Reach = 6.0 -- Default Reach
+
+    game["RunService"].Stepped:Connect(function()
+        local localPlayer = game:GetService("Players").LocalPlayer
+        local character = localPlayer.Character
+
+        if Leg and Reach and character and character.Humanoid and character.Humanoid.RigType then
+            local playerLeg = (Leg == "Left" and character.Humanoid.RigType == Enum.HumanoidRigType.R15) and "LeftLowerLeg" or "RightLowerLeg"
+            if character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+                playerLeg = (Leg == "Left") and "Left Leg" or "Right Leg"
+            end
+
+            local targetPart = character:FindFirstChild(playerLeg)
+            if targetPart then
+                if (workspace.TPSSystem.TPS.Position - targetPart.Position).Magnitude <= Reach then
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 0)
+                    firetouchinterest(workspace.TPSSystem.TPS, targetPart, 1)
+                end
+            end
+        end
+    end)
+end)
+
+local MoreTab = Window:NewTab("🎟 More 🎟")
+
+local Section = MoreTab:NewSection("🎟 More 🎟")
+
+Section:NewButton("res script", "ButtonInfo", function()
+    getgenv().Resolution = {
+    [".gg/scripters"] = 0.75
+}
+
+local Camera = workspace.CurrentCamera
+if getgenv().gg_scripters == nil then
+    game:GetService("RunService").RenderStepped:Connect(
+        function()
+            Camera.CFrame = Camera.CFrame * CFrame.new(0, 0, 0, 1, 0, 0, 0, getgenv().Resolution[".gg/scripters"], 0, 0, 0, 1)
+        end
+    )
+end
+getgenv().gg_scripters = "Aori0001"
+end)
+
+Section:NewButton("wait for updates, coming soon... 👀", "ButtonInfo", function()
+    print("Clicked")
+end)
